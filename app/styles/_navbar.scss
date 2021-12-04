@@ -61,13 +61,13 @@
 
     @media screen and (min-width: 992px) {
       &.active {
-        .fa {
+        .svg-inline--fa {
           visibility: visible;
         }
       }
     }
 
-    .fa {
+    .svg-inline--fa {
       visibility: hidden;
       color: $red;
       font-size: 2.5em;
