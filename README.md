@@ -1,7 +1,7 @@
 # site-aiki3
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![CircleCI](https://circleci.com/gh/BelettesSauvages/site-aiki3/tree/master.svg?style=svg)](https://circleci.com/gh/BelettesSauvages/site-aiki3/tree/master)
+[![CircleCI](https://circleci.com/gh/BelettesSauvages/site-aiki3/tree/master.svg?style=shield)](https://circleci.com/gh/BelettesSauvages/site-aiki3/tree/master)
 
 Website for Aiki3 - Aikido club at Troyes, France.
 
