@@ -153,17 +153,19 @@
 
   <h1>Lexique</h1>
   <div class="lexique row">
-    <BsTab @class="col-12" as |bstab|>
-      {{#each this.tabs as |tab|}}
-        <bstab.pane @title={{tab.title}}>
-          {{#each tab.definitions as |d|}}
-            <p>
-              <strong>{{d.title}}</strong>:
-              {{d.definition}}
-            </p>
-          {{/each}}
-        </bstab.pane>
-      {{/each}}
-    </BsTab>
+    <div class="col-12">
+      <BsTab as |bstab|>
+        {{#each this.tabs as |tab|}}
+          <bstab.pane @title={{tab.title}}>
+            {{#each tab.definitions as |d|}}
+              <p>
+                <strong>{{d.title}}</strong>:
+                {{d.definition}}
+              </p>
+            {{/each}}
+          </bstab.pane>
+        {{/each}}
+      </BsTab>
+    </div>
   </div>
 </div>
