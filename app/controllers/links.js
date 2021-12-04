@@ -1,8 +1,8 @@
 import Controller from '@ember/controller';
 import { A } from '@ember/array';
-import env from 'site-aiki3/config/environment';
+import config from 'site-aiki3/config/environment';
 
-const { rootURL } = env;
+const { rootURL } = config;
 
 export default class LinksController extends Controller {
   linkItems = A([
