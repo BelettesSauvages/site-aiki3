@@ -36,18 +36,20 @@
 
   <h1>Galerie</h1>
   <div class="gallery row">
-    <PhotoSwipe @class="col-12" @items={{this.gallery}} @history={{false}} as |photoSwipe|>
-      {{#each this.gallery as |item index|}}
-        {{!-- template-lint-disable no-invalid-interactive --}}
-        <img
-          src={{item.src}}
-          class="gallery__image{{if (eq index 0) " gallery__image--large"}}"
-          alt={{item.title}}
-          title={{item.title}}
-          {{on 'click' (fn photoSwipe.actions.open (hash index=index))}}
-        >
-      {{/each}}
-    </PhotoSwipe>
+    <div class="col-12">
+      <PhotoSwipe @items={{this.gallery}} @history={{false}} as |photoSwipe|>
+        {{#each this.gallery as |item index|}}
+          {{!-- template-lint-disable no-invalid-interactive --}}
+          <img
+            src={{item.src}}
+            class="gallery__image{{if (eq index 0) " gallery__image--large"}}"
+            alt={{item.title}}
+            title={{item.title}}
+            {{on 'click' (fn photoSwipe.actions.open (hash index=index))}}
+          >
+        {{/each}}
+      </PhotoSwipe>
+    </div>
   </div>
 
 </div>
