@@ -1,13 +1,13 @@
-import { module, test } from "qunit";
-import { setupRenderingTest } from "ember-qunit";
-import { render } from "@ember/test-helpers";
-import hbs from "htmlbars-inline-precompile";
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
+import hbs from 'htmlbars-inline-precompile';
 
-module("Integration | Component | sidemenu-item", function(hooks) {
+module('Integration | Component | sidemenu-item', function (hooks) {
   setupRenderingTest(hooks);
 
-  test("it renders", async function(assert) {
+  test('it renders', async function (assert) {
     await render(hbs`{{sidemenu-item}}`);
-    assert.dom(".section").exists({ count: 5 });
+    assert.dom('.section').exists({ count: 5 });
   });
 });

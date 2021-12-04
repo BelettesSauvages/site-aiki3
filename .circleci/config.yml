@@ -37,18 +37,6 @@ jobs:
           paths:
             - .
 
-  lint:
-    <<: *defaults
-    steps:
-      - attach_workspace:
-          at: .
-      - run:
-          name: Lint Handlebars
-          command: yarn lint:hbs
-      - run:
-          name: Lint JavaScript
-          command: yarn lint:js
-
   test:
     <<: *defaults
     steps:
@@ -79,15 +67,11 @@ workflows:
       - install_dependencies:
           requires:
             - checkout_code
-      - lint:
-          requires:
-            - install_dependencies
       - test:
           requires:
             - install_dependencies
       - build_deploy:
           requires:
-            - lint
             - test
           filters:
             branches:
