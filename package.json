@@ -34,7 +34,7 @@
     "ember-cli-htmlbars-inline-precompile": "^2.1.0",
     "ember-cli-inject-live-reload": "^1.8.2",
     "ember-cli-roboto-fontface": "^2.0.1",
-    "ember-cli-sass": "^7.1.7",
+    "ember-cli-sass": "^10.0.1",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-template-lint": "^1.0.0-beta.1",
     "ember-cli-uglify": "^2.1.0",
@@ -55,6 +55,7 @@
     "loader.js": "^4.7.0",
     "photoswipe": "^4.1.2",
     "qunit-dom": "^0.8.4",
+    "sass": "^1.44.0",
     "sitemap-autogenerator": "^1.2.2"
   },
   "engines": {
