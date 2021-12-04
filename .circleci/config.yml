@@ -1,6 +1,6 @@
 defaults: &defaults
   docker:
-    - image: circleci/node:10-browsers
+    - image: circleci/node:14-browsers
       environment:
         JOBS: 1
   working_directory: ~/site-aiki3
@@ -23,13 +23,13 @@ jobs:
           at: .
       - restore_cache:
           keys:
-            - site-aiki3-node10-v1-{{ checksum "yarn.lock" }}
-            - site-aiki3-node10-v1-
+            - site-aiki3-node14-v1-{{ checksum "yarn.lock" }}
+            - site-aiki3-node14-v1-
       - run:
           name: Yarn Install
           command: yarn install --non-interactive --pure-lockfile
       - save_cache:
-          key: site-aiki3-node10-v1-{{ checksum "yarn.lock" }}
+          key: site-aiki3-node14-v1-{{ checksum "yarn.lock" }}
           paths:
             - ~/site-aiki3/node_modules
       - persist_to_workspace:
