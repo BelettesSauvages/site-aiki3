@@ -2,9 +2,9 @@
 <div class="links">
 
   <div class="sites">
-    {{#each linkItems as |linkItem|}}
+    {{#each this.linkItems as |linkItem|}}
       <div class="link">
-        <a href={{linkItem.url}} target="_blank" rel="noopener">
+        <a href={{linkItem.url}} target="_blank" rel="noopener noreferrer">
           <img src={{linkItem.image}} alt={{linkItem.title}} title={{linkItem.title}}>
           <br>
           {{linkItem.title}}
@@ -13,15 +13,15 @@
     {{/each}}
   </div>
 
-  {{#if docs}}
+  {{#if this.docs}}
     <div class="docs">
       <h1>Documents à télécharger</h1>
       <div class="row">
         <div class="col-12">
           <ul>
-            {{#each docs as |doc|}}
+            {{#each this.docs as |doc|}}
               <li>
-                {{doc.title}} : <a href={{doc.url}} target="_blank" rel="noopener">Télécharger</a>
+                {{doc.title}} : <a href={{doc.url}} target="_blank" rel="noopener noreferrer">Télécharger</a>
               </li>
             {{/each}}
           </ul>
