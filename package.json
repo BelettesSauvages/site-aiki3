@@ -1,10 +1,9 @@
 {
   "name": "site-aiki3",
   "version": "0.0.0",
-  "private": true,
-  "description": "Aiki3 - club d'Aikido à Troyes",
-  "repository": "",
-  "license": "MIT",
+  "description": "Website for Aiki3 - Aikido club at Troyes, France.",
+  "repository": "https://github.com/BelettesSauvages/site-aiki3",
+  "license": "AGPL-3.0-or-later",
   "author": "",
   "directories": {
     "doc": "doc",
