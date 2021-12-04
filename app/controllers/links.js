@@ -39,9 +39,9 @@ export default Controller.extend({
       url: `${rootURL}assets/aiki3-triptyque-2010-2011.pdf`
     },
     {
-      title: 'Le planning des stages 2020-2021 de Patrick Bénézi (pdf)',
+      title: 'Le planning des stages 2021-2022 de Patrick Bénézi (pdf)',
       url:
-        'http://www.aikido-benezi.com/img/affiche/planning%202020-2021%2025%208%2020.pdf'
+        'http://www.aikido-benezi.com/img/affiche/planning%202021-2022%20-28%207%2021.pdf'
     }
   ])
 });
