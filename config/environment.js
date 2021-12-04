@@ -60,7 +60,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     // Force URL's anchor to load the starting state of the application
     // This is needed because our current host can't support URL Rewriting
-    ENV.APP.locationType = 'hash';
+    ENV.locationType = 'hash';
   }
 
   return ENV;
