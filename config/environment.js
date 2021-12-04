@@ -33,6 +33,8 @@ module.exports = function (environment) {
       // channel: undefined,
       // baseUrl: '//maps.googleapis.com/maps/api/js'
     },
+
+    'sitemap-autogenerator': {},
   };
 
   if (environment === 'development') {
