@@ -27,16 +27,10 @@ $spacing-lg: 20px;
 $spacing-xl: 40px;
 
 // Fonts
-$sans-serif: "Roboto", sans-serif;
-$serif: "Amethysta", serif;
+$font-family-serif: Georgia, "Times New Roman", Times, serif;
 
 // Typo
-$base-font-family: $sans-serif;
-$base-font-size: 1em;
-$base-line-height: 1.5;
-$heading-font-family: $serif;
-$heading-font-size: 2em;
-$heading-line-height: 1.2;
+$heading-font-family: $font-family-serif;
 
 // Border
 $base-border: 1px solid $white-gray;
