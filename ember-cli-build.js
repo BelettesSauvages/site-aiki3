@@ -9,9 +9,6 @@ module.exports = function (defaults) {
       importBootstrapFont: false,
       importBootstrapCSS: false,
     },
-    fingerprint: {
-      exclude: ['assets/gallery_*.jpg', 'assets/link_*', 'assets/*.pdf'],
-    },
   });
 
   return app.toTree();
