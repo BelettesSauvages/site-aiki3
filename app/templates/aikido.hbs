@@ -154,17 +154,28 @@
   <h1>Lexique</h1>
   <div class="lexique row">
     <div class="col-12">
-      <BsTab as |bstab|>
-        {{#each this.tabs as |tab|}}
-          <bstab.pane @title={{tab.title}}>
-            {{#each tab.definitions as |d|}}
-              <p>
-                <strong>{{d.title}}</strong>:
-                {{d.definition}}
-              </p>
-            {{/each}}
-          </bstab.pane>
-        {{/each}}
+      <BsTab @customTabs={{true}} as |tab|>
+        <BsNav @type="tabs" as |nav|>
+          {{#each this.tabs as |t|}}
+            <nav.item @active={{bs-eq tab.activeId (concat "tab-" t.title)}} {{on "click" (fn tab.select  (concat "tab-" t.title))}}>
+              <LinkTo @route="aikido" @activeClass="noop" class="nav-link{{if (bs-eq tab.activeId (concat "tab-" t.title)) ' active' ''}}">
+                {{t.title}}
+              </LinkTo>
+            </nav.item>
+          {{/each}}
+        </BsNav>
+        <div class="tab-content">
+          {{#each this.tabs as |t|}}
+            <tab.pane @id={{concat "tab-" t.title}} @title={{t.title}}>
+              {{#each t.definitions as |d|}}
+                <p>
+                  <strong>{{d.title}}</strong>:
+                  {{d.definition}}
+                </p>
+              {{/each}}
+            </tab.pane>
+          {{/each}}
+        </div>
       </BsTab>
     </div>
   </div>
