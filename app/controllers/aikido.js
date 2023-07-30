@@ -442,7 +442,7 @@ export default class AikidoController extends Controller {
   get tabs() {
     return this.definitions
       .map((def) => def.title.charAt(0))
-      .uniq()
+      .filter((val, i, array) => array.indexOf(val) === i)
       .sort()
       .map((title) => {
         let definitions = this.definitions.filter(
