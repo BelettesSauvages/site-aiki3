@@ -1,7 +1,6 @@
 {{page-title "Liens"}}
-<div class="links">
-
-  <div class="sites">
+<div class="page links">
+  <section class="sites">
     {{#each this.linkItems as |linkItem|}}
       <div class="link">
         <a href={{linkItem.url}} target="_blank" rel="noopener noreferrer">
@@ -11,23 +10,17 @@
         </a>
       </div>
     {{/each}}
-  </div>
-
+  </section>
   {{#if this.docs}}
-    <div class="docs">
+    <section class="docs">
       <h1>Documents à télécharger</h1>
-      <div class="row">
-        <div class="col-12">
-          <ul>
-            {{#each this.docs as |doc|}}
-              <li>
-                {{doc.title}} : <a href={{doc.url}} target="_blank" rel="noopener noreferrer">Télécharger</a>
-              </li>
-            {{/each}}
-          </ul>
-        </div>
-      </div>
-    </div>
+      <ul>
+        {{#each this.docs as |doc|}}
+          <li>
+            <p>{{doc.title}}&nbsp;: <a href={{doc.url}} target="_blank" rel="noopener noreferrer">Télécharger</a></p>
+          </li>
+        {{/each}}
+      </ul>
+    </section>
   {{/if}}
-
 </div>

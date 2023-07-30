@@ -62,36 +62,31 @@ body {
             border-radius: 8px;
           }
         }
+
+        &.links {
+          .sites {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            text-align: center;
+            background-color: rgba($dark-background-color, 0.8);
+            padding: $spacing-xl $spacing-lg $spacing-xl $spacing-lg;
+            border-radius: 8px;
+  
+            .link {
+              img {
+                height: 150px;
+              }
+            }
+          }
+        }
       }
 
       .aikido {
         text-align: justify;
         .row {
           padding-bottom: $spacing-md;
-        }
-      }
-
-      .links {
-        .sites {
-          text-align: center;
-          background-color: rgba($dark-background-color, 0.8);
-          padding-top: $spacing-xl;
-          padding-bottom: $spacing-xl;
-
-          .link {
-            display: inline-block;
-            &:not(:last-child) {
-              margin-right: $spacing-lg;
-            }
-            img {
-              height: 150px;
-            }
-          }
-        }
-        .docs {
-          h1 {
-            margin-top: 0;
-          }
         }
       }
     }
