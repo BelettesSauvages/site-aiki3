@@ -30,10 +30,37 @@ body {
         section:not(:last-child) {
           margin-bottom: $spacing-xl;
         }
-        
+
         p {
           margin: 0 0 $spacing-md;
           line-height: 1.5em;
+        }
+
+        &.practice {
+          @media screen and ( min-width: 1200px) {
+            .training-location {
+              display: flex;
+              flex-direction: row;
+              gap: $spacing-md;
+              margin-bottom: $spacing-md;
+              
+              .info {
+                flex: none;
+                width: 280px;
+              }
+  
+              .map {
+                flex: auto;
+              }
+            }
+          }
+
+          ul {
+            padding: $spacing-md $spacing-md $spacing-md $spacing-xl;
+            background-color: $light-gray;
+            color: $base-gray;
+            border-radius: 8px;
+          }
         }
       }
 
