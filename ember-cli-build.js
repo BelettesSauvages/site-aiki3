@@ -3,13 +3,6 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function (defaults) {
-  const app = new EmberApp(defaults, {
-    'ember-bootstrap': {
-      bootstrapVersion: 4,
-      importBootstrapFont: false,
-      importBootstrapCSS: false,
-    },
-  });
-
+  const app = new EmberApp(defaults);
   return app.toTree();
 };

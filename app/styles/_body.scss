@@ -3,7 +3,9 @@ body {
   background-image: url("../assets/background.png");
   background-repeat: repeat-y;
   background-position: right top;
-
+  margin: 0;
+  font-family: $font-family-serif;
+  
   .page-content {
     margin-top: $navbar-height;
 

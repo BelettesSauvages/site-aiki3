@@ -1,100 +1,58 @@
-@mixin linear-gradient(
-  $top-color,
-  $bottom-color,
-  $top-opacity,
-  $bottom-opacity
-) {
-  background: -moz-linear-gradient(
-    top,
-    rgba($top-color, $top-opacity) 0%,
-    rgba($bottom-color, $bottom-opacity) 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    top,
-    rgba($top-color, $top-opacity) 0%,
-    rgba($bottom-color, $bottom-opacity) 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    rgba($top-color, $top-opacity) 0%,
-    rgba($bottom-color, $bottom-opacity) 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
 .navbar {
-  background-color: $navbar-background-color !important;
-  box-shadow: 0px 2px 4px $navbar-shadow-color;
-  padding: 0px;
+  position: sticky;
+  top: 0;
+  background-color: $navbar-background-color;
+  box-shadow: 0px 0px 30px $navbar-shadow-color;
 
-  .navbar-brand {
-    padding: 0px;
-    padding-left: $spacing-lg;
-    img {
-      padding: $spacing-sm;
-      height: calc(#{$navbar-height} - (2 * #{$spacing-sm}));
-    }
+  @media screen and (max-width: $screen-size-small-menu) {
+    position: inherit;
   }
 
-  .navbar-toggler {
-    font-size: 1em;
-    margin-top: 2px;
-    margin-left: 2px;
-    margin-bottom: 2px;
-  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
 
-  .nav-item {
-    text-align: center;
-
-    a.nav-link {
-      padding-left: $spacing-xl;
-      padding-right: $spacing-xl;
-      font-weight: bold;
-      color: $navbar-link-color;
-      text-decoration: none;
-      transition: background-color $base-duration $base-timing;
+    @media screen and (max-width: $screen-size-small-menu) {
+      flex-direction: column;
     }
 
-    .fa-parent {
-      width: 100%;
-      height: 1px;
+    .home-item {
+      padding: $spacing-md $spacing-lg $spacing-md $spacing-lg;
+
+      img {
+        height: 34px;
+        width: 110px;
+      }
     }
 
-    @media screen and (min-width: 992px) {
-      &.active {
-        .svg-inline--fa {
-          visibility: visible;
+    .nav-item {
+      @media screen and (max-width: $screen-size-small-menu) {
+        border-top: $base-border;
+      }
+
+      a {
+        display: block;
+        padding: $spacing-lg $spacing-lg $spacing-lg $spacing-lg;
+        color: $dark-gray;
+        height: 18px;
+        white-space: nowrap;
+        font-weight: bold;
+
+        &:hover, 
+        &:focus,
+        &:active {
+          background-color: $dark-gray;
+          color: $white-gray;
+        }
+
+        &.active {
+          background-color: $dark-gray;
+          color: $red;
         }
       }
     }
-
-    .svg-inline--fa {
-      visibility: hidden;
-      color: $red;
-      font-size: 2.5em;
-      margin-top: -10px;
-    }
-
-    &.active,
-    &:focus,
-    &:hover {
-      background-color: $navbar-thumb-color-selected;
-      a.nav-link {
-        color: $navbar-link-active-color;
-      }
-    }
   }
-}
-
-.navbar-underline {
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: $navbar-height + $spacing-xl;
-  @include linear-gradient(
-    $base-background-color,
-    $base-background-color,
-    1,
-    0
-  );
-  z-index: 1;
 }
