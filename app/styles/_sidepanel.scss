@@ -1,0 +1,32 @@
+.side-content {
+  background-color: $dark-background-color;
+  padding: $spacing-lg;
+  width: $left-side-width;
+
+  @media screen and (max-width: $screen-size-small-menu) {
+    width: inherit;
+
+    .sections {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: $spacing-md;
+    }
+  }
+
+  h1 {
+    font-size: 1.6em;
+    color: $white-gray;
+    margin-bottom: $spacing-lg;
+  }
+
+  h2 {
+    font-size: 1.4em;
+    margin-bottom: $spacing-md;
+  }
+
+  section {
+    margin-bottom: $spacing-lg;
+    min-width: 148px;
+  }
+}

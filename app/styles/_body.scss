@@ -7,13 +7,23 @@ body {
   font-family: $font-family-serif;
   
   .page-content {
-    margin-top: $navbar-height;
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: $screen-size-small-menu) {
+      flex-direction: column;
+    }
+
+    .side-content {
+      flex: none;
+    }
 
     .main-content {
-      padding-top: $spacing-md;
-      @media (min-width: $side-media-min-height) {
-        margin-left: $left-side-width;
-        width: calc(100% - #{$right-side-width} - #{$left-side-width});
+      flex: auto;
+      padding: $spacing-xl;
+
+      img, iframe {
+        max-width: 100%;
       }
 
       .aikido {

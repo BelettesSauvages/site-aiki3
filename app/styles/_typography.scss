@@ -38,8 +38,8 @@ h2 {
 h1 {
   font-size: modular-scale(6);
   color: $heading-color;
+  margin-top: 0px;
   margin-bottom: $spacing-md;
-  margin-top: $spacing-xl;
 
   .first {
     margin-top: $spacing-lg;
