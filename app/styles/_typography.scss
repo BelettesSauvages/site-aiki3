@@ -8,6 +8,19 @@ h3 {
   font-family: $heading-font-family;
 }
 
+h1 {
+  font-size: 1.8em;
+  color: $heading-color;
+  margin-top: 0px;
+  margin-bottom: $spacing-md;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-top: $spacing-sm;
+  margin-bottom: $spacing-sm;
+}
+
 h6 {
   font-size: modular-scale(1);
 }
@@ -27,23 +40,6 @@ h3 {
   font-size: modular-scale(4);
   margin-top: $spacing-sm;
   margin-bottom: $spacing-sm;
-}
-
-h2 {
-  font-size: modular-scale(5);
-  margin-top: $spacing-sm;
-  margin-bottom: $spacing-sm;
-}
-
-h1 {
-  font-size: modular-scale(6);
-  color: $heading-color;
-  margin-top: 0px;
-  margin-bottom: $spacing-md;
-
-  .first {
-    margin-top: $spacing-lg;
-  }
 }
 
 p {
