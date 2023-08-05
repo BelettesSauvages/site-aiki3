@@ -8,8 +8,13 @@ $light-gray: #d3d3d3;
 $base-gray: #333;
 $dark-gray: #121212;
 
+// Media
+$screen-size-small-menu: 750px;
+$screen-max-width: 1260px;
+
 // Font Colors
 $base-font-color: $white-gray;
+$base-font-color-negative: $dark-gray;
 $action-color: $red;
 $action-hover-color: $dark-red;
 $heading-color: $red;

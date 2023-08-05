@@ -3,7 +3,9 @@ import { A } from '@ember/array';
 import { tracked } from '@glimmer/tracking';
 
 export default class AikidoController extends Controller {
-  @tracked definitions = A([
+  @tracked currentTab = 'A';
+
+  definitions = A([
     {
       title: 'Ashi',
       definition: 'La jambe',
@@ -440,9 +442,7 @@ export default class AikidoController extends Controller {
   ]);
 
   get tabs() {
-    return this.definitions
-      .map((def) => def.title.charAt(0))
-      .uniq()
+    return [...new Set(this.definitions.map((def) => def.title.charAt(0)))]
       .sort()
       .map((title) => {
         let definitions = this.definitions.filter(

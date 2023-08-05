@@ -1,47 +1,157 @@
 body {
   background-color: $base-background-color;
-  background-image: url("../assets/background.png");
-  background-repeat: repeat-y;
-  background-position: right top;
+  margin: 0;
+  font-family: $font-family-serif;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
   .page-content {
-    margin-top: $navbar-height;
+    display: flex;
+    flex-direction: row;
+    max-width: $screen-max-width;
+
+    @media screen and (max-width: $screen-size-small-menu) {
+      flex-direction: column;
+    }
+
+    .side-content {
+      flex: none;
+    }
 
     .main-content {
-      padding-top: $spacing-md;
-      @media (min-width: $side-media-min-height) {
-        margin-left: $left-side-width;
-        width: calc(100% - #{$right-side-width} - #{$left-side-width});
+      background-image: url("../assets/background.png");
+      background-repeat: repeat-y;
+      background-position: right top;
+      flex: auto;
+      padding: $spacing-xl;
+
+      img, iframe {
+        max-width: 100%;
+      }
+
+      .page {
+        section:not(:last-child) {
+          margin-bottom: $spacing-xl;
+        }
+
+        p {
+          margin: 0 0 $spacing-md;
+          line-height: 1.5em;
+        }
+
+        &.index {
+          .content {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .logo {
+              flex: none;
+              padding-top: 10px;
+
+              img {
+                width: 200px;
+              }
+            }
+          }
+        }
+
+        &.aikido {
+          img {
+            width: 200px;
+            float: left;
+            margin: 20px;
+          }
+
+          .letters {
+            margin-bottom: 20px;
+
+            button {
+              font-weight: bold;
+            }
+          }
+
+          .tab-content {
+            padding: $spacing-md $spacing-md $spacing-md $spacing-xl;
+            background-color: $light-gray;
+            color: $base-gray;
+            border-radius: 8px;
+            padding-right: 40px;
+
+            .row {
+              padding: 10px;
+              display: grid;
+              grid-template-columns: 1fr 4fr;
+
+              @media screen and (max-width: $screen-size-small-menu) {
+                text-align: left;
+              }
+
+              dt {
+                text-align: right;
+              }
+
+              dd {
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+
+        &.practice {
+          @media screen and ( min-width: 1200px) {
+            .training-location {
+              display: flex;
+              flex-direction: row;
+              gap: $spacing-md;
+              margin-bottom: $spacing-md;
+              
+              .info {
+                flex: none;
+                width: 280px;
+              }
+  
+              .map {
+                flex: auto;
+              }
+            }
+          }
+
+          ul {
+            padding: $spacing-md $spacing-md $spacing-md $spacing-xl;
+            background-color: $light-gray;
+            color: $base-gray;
+            border-radius: 8px;
+          }
+        }
+
+        &.links {
+          .sites {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            text-align: center;
+            background-color: rgba($dark-background-color, 0.8);
+            padding: $spacing-xl $spacing-lg $spacing-xl $spacing-lg;
+            border-radius: 8px;
+  
+            .link {
+              img {
+                height: 150px;
+              }
+            }
+          }
+        }
       }
 
       .aikido {
         text-align: justify;
         .row {
           padding-bottom: $spacing-md;
-        }
-      }
-
-      .links {
-        .sites {
-          text-align: center;
-          background-color: rgba($dark-background-color, 0.8);
-          padding-top: $spacing-xl;
-          padding-bottom: $spacing-xl;
-
-          .link {
-            display: inline-block;
-            &:not(:last-child) {
-              margin-right: $spacing-lg;
-            }
-            img {
-              height: 150px;
-            }
-          }
-        }
-        .docs {
-          h1 {
-            margin-top: 0;
-          }
         }
       }
     }
