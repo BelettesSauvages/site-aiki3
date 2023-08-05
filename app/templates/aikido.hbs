@@ -4,9 +4,9 @@
   <h1 class="first">Un peu d'histoire</h1>
   <div class="row">
     <div class="col-5 col-md-4 col-lg-3">
-      <img 
-        src="{{rootURL}}assets/presentation_osensei1.jpg" 
-        alt="O'Sensei Ueshiba Morihei" 
+      <img
+        src="{{rootURL}}assets/presentation_osensei1.jpg"
+        alt="O'Sensei Ueshiba Morihei"
         title="O'Sensei Ueshiba Morihei"
       />
     </div>
@@ -123,10 +123,10 @@
   <h1>En conclusion</h1>
   <div class="row">
     <div class="col-5 col-md-4 col-lg-3">
-      {{!-- <img 
-        src="{{rootURL}}assets/presentation_osensei2.jpg" 
-        alt="O'Sensei Ueshiba Morihei" 
-        title="O'Sensei Ueshiba Morihei" 
+      {{!-- <img
+        src="{{rootURL}}assets/presentation_osensei2.jpg"
+        alt="O'Sensei Ueshiba Morihei"
+        title="O'Sensei Ueshiba Morihei"
       /> --}}
     </div>
     <div class="col-7 col-md-8 col-lg-9">
@@ -162,29 +162,31 @@
   <h1>Lexique</h1>
   <div class="lexique row">
     <div class="col-12">
-      <BsTab @customTabs={{true}} as |tab|>
-        <BsNav @type="tabs" as |nav|>
-          {{#each this.tabs as |t|}}
-            <nav.item @active={{bs-eq tab.activeId (concat "tab-" t.title)}} {{on "click" (fn tab.select  (concat "tab-" t.title))}}>
-              <LinkTo @route="aikido" @activeClass="noop" class="nav-link{{if (bs-eq tab.activeId (concat "tab-" t.title)) ' active' ''}}">
-                {{t.title}}
-              </LinkTo>
-            </nav.item>
-          {{/each}}
-        </BsNav>
-        <div class="tab-content">
-          {{#each this.tabs as |t|}}
-            <tab.pane @id={{concat "tab-" t.title}} @title={{t.title}}>
-              {{#each t.definitions as |d|}}
-                <p>
-                  <strong>{{d.title}}</strong>:
-                  {{d.definition}}
-                </p>
-              {{/each}}
-            </tab.pane>
-          {{/each}}
-        </div>
-      </BsTab>
+
+      {{#each this.tabs as |t|}}
+        <button type="button" {{on "click" (fn (mut this.currentTab) t.title)}}>
+          {{t.title}}
+        </button>
+      {{/each}}
+
+      <div class="tab-content">
+        {{#each this.tabs as |t|}}
+          <div
+            style={{if
+              (eq this.currentTab t.title)
+              "display:block;"
+              "display:none;"
+            }}
+          >
+            {{#each t.definitions as |d|}}
+              <p>
+                <strong>{{d.title}}</strong>:
+                {{d.definition}}
+              </p>
+            {{/each}}
+          </div>
+        {{/each}}
+      </div>
     </div>
   </div>
 </div>
