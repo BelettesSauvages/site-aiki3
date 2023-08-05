@@ -41,6 +41,66 @@ body {
           line-height: 1.5em;
         }
 
+        &.index {
+          .content {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .logo {
+              flex: none;
+              padding-top: 10px;
+
+              img {
+                width: 200px;
+              }
+            }
+          }
+        }
+
+        &.aikido {
+          img {
+            width: 200px;
+            float: left;
+            margin: 20px;
+          }
+
+          .letters {
+            margin-bottom: 20px;
+
+            button {
+              font-weight: bold;
+            }
+          }
+
+          .tab-content {
+            padding: $spacing-md $spacing-md $spacing-md $spacing-xl;
+            background-color: $light-gray;
+            color: $base-gray;
+            border-radius: 8px;
+            padding-right: 40px;
+
+            .row {
+              padding: 10px;
+              display: grid;
+              grid-template-columns: 1fr 4fr;
+
+              @media screen and (max-width: $screen-size-small-menu) {
+                text-align: left;
+              }
+
+              dt {
+                text-align: right;
+              }
+
+              dd {
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+
         &.practice {
           @media screen and ( min-width: 1200px) {
             .training-location {
