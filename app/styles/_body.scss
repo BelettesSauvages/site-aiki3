@@ -1,14 +1,16 @@
 body {
   background-color: $base-background-color;
-  background-image: url("../assets/background.png");
-  background-repeat: repeat-y;
-  background-position: right top;
   margin: 0;
   font-family: $font-family-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
   .page-content {
     display: flex;
     flex-direction: row;
+    max-width: $screen-max-width;
 
     @media screen and (max-width: $screen-size-small-menu) {
       flex-direction: column;
@@ -19,6 +21,9 @@ body {
     }
 
     .main-content {
+      background-image: url("../assets/background.png");
+      background-repeat: repeat-y;
+      background-position: right top;
       flex: auto;
       padding: $spacing-xl;
 

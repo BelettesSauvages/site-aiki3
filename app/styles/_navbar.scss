@@ -1,8 +1,11 @@
 .navbar {
   position: sticky;
   top: 0;
+  display: flex;
+  justify-content: center;
   background-color: $navbar-background-color;
   box-shadow: 0px 0px 30px $navbar-shadow-color;
+  width: 100%;
   z-index: 400;
 
   @media screen and (max-width: $screen-size-small-menu) {
@@ -15,9 +18,11 @@
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    max-width: $screen-max-width;
 
     @media screen and (max-width: $screen-size-small-menu) {
       flex-direction: column;
+      width: 100%;
     }
 
     .home-item {
