@@ -12,7 +12,7 @@ body {
     flex-direction: row;
     max-width: $screen-max-width;
 
-    @media screen and (max-width: $screen-size-small-menu) {
+    @media screen and (orientation:portrait), screen and (max-width: $screen-size-small-menu) {
       flex-direction: column;
     }
 
@@ -86,7 +86,7 @@ body {
               display: grid;
               grid-template-columns: 1fr 4fr;
 
-              @media screen and (max-width: $screen-size-small-menu) {
+              @media screen and (orientation:portrait), screen and (max-width: $screen-size-small-menu) {
                 text-align: left;
               }
 
@@ -102,7 +102,7 @@ body {
         }
 
         &.practice {
-          @media screen and ( min-width: 1200px) {
+          @media screen and (min-width: $screen-max-width) {
             .training-location {
               display: flex;
               flex-direction: row;
