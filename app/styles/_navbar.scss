@@ -8,7 +8,7 @@
   width: 100%;
   z-index: 400;
 
-  @media screen and (max-width: $screen-size-small-menu) {
+  @media screen and (orientation:portrait), screen and (max-width: $screen-size-small-menu) {
     position: inherit;
   }
 
@@ -20,7 +20,7 @@
     flex-direction: row;
     max-width: $screen-max-width;
 
-    @media screen and (max-width: $screen-size-small-menu) {
+    @media screen and (orientation:portrait), screen and (max-width: $screen-size-small-menu) {
       flex-direction: column;
       width: 100%;
     }
@@ -35,7 +35,7 @@
     }
 
     .nav-item {
-      @media screen and (max-width: $screen-size-small-menu) {
+      @media screen and (orientation:portrait), screen and (max-width: $screen-size-small-menu) {
         border-top: $base-border;
       }
 

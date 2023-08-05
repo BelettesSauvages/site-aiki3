@@ -3,7 +3,7 @@
   padding: $spacing-lg;
   width: $left-side-width;
 
-  @media screen and (max-width: $screen-size-small-menu) {
+  @media screen and (orientation:portrait), screen and (max-width: $screen-size-small-menu) {
     width: inherit;
 
     .sections {
