@@ -5,14 +5,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   .page-content {
     display: flex;
     flex-direction: row;
-    max-width: $screen-max-width;
 
-    @media screen and (orientation:portrait), screen and (max-width: $screen-size-small-menu) {
+    @media screen and (orientation: landscape),
+      screen and (min-width: $screen-max-width) {
+      max-width: $screen-max-width;
+    }
+
+    @media screen and (orientation: portrait),
+      screen and (max-width: $screen-size-small-menu) {
       flex-direction: column;
+      width: 100%;
     }
 
     .side-content {
@@ -26,7 +32,8 @@ body {
       flex: auto;
       padding: $spacing-xl;
 
-      img, iframe {
+      img,
+      iframe {
         max-width: 100%;
       }
 
@@ -37,7 +44,6 @@ body {
 
         p {
           margin: 0 0 $spacing-md;
-          line-height: 1.5em;
         }
 
         &.index {
@@ -85,7 +91,8 @@ body {
               display: grid;
               grid-template-columns: 1fr 4fr;
 
-              @media screen and (orientation:portrait), screen and (max-width: $screen-size-small-menu) {
+              @media screen and (orientation: portrait),
+                screen and (max-width: $screen-size-small-menu) {
                 text-align: left;
               }
 
@@ -101,18 +108,19 @@ body {
         }
 
         &.practice {
-          @media screen and (min-width: $screen-max-width) {
+          @media screen and (orientation: landscape),
+            screen and (min-width: $screen-max-width) {
             .training-location {
               display: flex;
               flex-direction: row;
               gap: $spacing-md;
               margin-bottom: $spacing-md;
-              
+
               .info {
                 flex: none;
                 width: 280px;
               }
-  
+
               .map {
                 flex: auto;
               }
@@ -137,7 +145,7 @@ body {
             background-color: rgba($dark-background-color, 0.8);
             padding: $spacing-xl $spacing-lg $spacing-xl $spacing-lg;
             border-radius: 8px;
-  
+
             .link {
               img {
                 height: 150px;
