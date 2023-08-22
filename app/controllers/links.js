@@ -38,9 +38,9 @@ export default class LinksController extends Controller {
       title: "Tryptique de présentation de l'Aiki3 (pdf)",
       url: rootURL + 'assetsaiki3-triptyque-2010-2011.pdf',
     },
-    // {
-    //   title: 'Le planning des stages 2021-2022 de Patrick Bénézi (pdf)',
-    //   url: 'http://www.aikido-benezi.com/img/affiche/planning%202021-2022%20-28%207%2021.pdf',
-    // },
+    {
+      title: 'Le planning des stages 2023-2024 de Patrick Bénézi (pdf)',
+      url: 'http://www.aikido-benezi.com/img/affiche/planning%202023-2024%20V1.pdf',
+    },
   ]);
 }
