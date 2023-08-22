@@ -36,7 +36,7 @@ export default class LinksController extends Controller {
   docs = A([
     {
       title: "Tryptique de présentation de l'Aiki3 (pdf)",
-      url: rootURL + 'assetsaiki3-triptyque-2010-2011.pdf',
+      url: rootURL + 'assets/aiki3-triptyque-2010-2011.pdf',
     },
     {
       title: 'Le planning des stages 2023-2024 de Patrick Bénézi (pdf)',
