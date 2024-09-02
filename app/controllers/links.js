@@ -39,12 +39,12 @@ export default class LinksController extends Controller {
       url: rootURL + 'assets/aiki3-triptyque-2010-2011.pdf',
     },
     {
-      title: 'Le planning des stages 2023-2024 de la Ligue Grand-Est (pdf)',
-      url: 'https://cloud.aikido-grand-est-ffaaa.fr/s/TDRFWXiLxpYwZLc',
+      title: 'Le planning des stages de la Ligue Grand-Est',
+      url: 'https://aikido-grand-est-ffaaa.fr/calendar/global',
     },
     {
-      title: 'Le planning des stages 2023-2024 de Patrick Bénézi (pdf)',
-      url: 'http://www.aikido-benezi.com/img/affiche/planning%202023-2024%20V1.pdf',
+      title: 'Le planning des stages de Patrick Bénézi',
+      url: 'http://www.aikido-benezi.com/stages.html',
     },
   ]);
 }
